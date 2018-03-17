@@ -3,11 +3,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 // import store from './store'
-import Routes from './Main'
+import Main from './Main'
 
 ReactDOM.render(
-//   <Provider>
+  // <Provider>
     <Main />,
-//   </Provider>,
+//  </Provider>,
   document.getElementById('app')
 )

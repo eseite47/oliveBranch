@@ -1,3 +1,6 @@
+const LiveReloadPlugin = require('webpack-livereload-plugin')
+const isDev = process.env.NODE_ENV === 'development'
+
 module.exports = {
     entry: './client/index.js',
     output: {
@@ -28,6 +31,7 @@ module.exports = {
           loader: 'file-loader'
         }
       ]
-    }
+    },
+    plugins: isDev ? [new LiveReloadPlugin({appendScriptTag: true})] : []
   }
   
